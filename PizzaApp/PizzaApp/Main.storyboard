@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dav-DE-CxO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Inicio View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InicioViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cqw-Hm-FIk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-DS-ANw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ikc-ON-F45"/>
+                                            <constraint firstAttribute="width" constant="304" id="tjC-Ic-L0z"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="boton_acceder"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="tjC-Ic-L0z"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="abreVistaTamaño:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BY2-b4-qDp"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizza paint" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-Ov-c5s">
+                                        <rect key="frame" x="0.0" y="80" width="600" height="456"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="223" id="sNB-wZ-14c"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sNB-wZ-14c"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cqw-Hm-FIk" secondAttribute="bottom" id="2NY-Qa-9jB"/>
+                            <constraint firstAttribute="trailing" secondItem="cqw-Hm-FIk" secondAttribute="trailing" id="3uo-3N-pgP"/>
+                            <constraint firstItem="cqw-Hm-FIk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KgR-qh-jFI"/>
+                            <constraint firstItem="cqw-Hm-FIk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tsi-oa-86f"/>
+                            <constraint firstItem="cqw-Hm-FIk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YlM-X1-RMB"/>
+                            <constraint firstAttribute="trailing" secondItem="cqw-Hm-FIk" secondAttribute="trailing" id="bJr-0f-hO2"/>
+                            <constraint firstItem="cqw-Hm-FIk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="buU-U0-5xD"/>
+                            <constraint firstAttribute="bottom" secondItem="cqw-Hm-FIk" secondAttribute="bottom" id="ch0-IN-SGd"/>
+                            <constraint firstItem="cqw-Hm-FIk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yeM-Jd-FYi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3uo-3N-pgP"/>
+                                <exclude reference="KgR-qh-jFI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="hD6-hk-Nc8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="362"/>
+        </scene>
+        <!--Tama View Controller-->
+        <scene sceneID="E0u-JD-Mes">
+            <objects>
+                <viewController storyboardIdentifier="ViewTama" id="cUm-l9-ObG" customClass="TamaViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DPS-NV-Dm1"/>
+                        <viewControllerLayoutGuide type="bottom" id="022-hI-9rt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rUm-XE-bnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xcM-WR-yJp">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box_of_Pizza_8" translatesAutoresizingMaskIntoConstraints="NO" id="48Y-Je-kwi">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                        <animations/>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-mf-iVo">
+                                        <rect key="frame" x="0.0" y="452" width="600" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="DXb-uN-SCy"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Chica"/>
+                                            <segment title="Mediana"/>
+                                            <segment title="Grande"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNH-Kj-AhL">
+                                        <rect key="frame" x="0.0" y="480" width="600" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Uq7-8F-jWy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="button-continuar"/>
+                                        <connections>
+                                            <action selector="accionSegmentoTamaño:" destination="cUm-l9-ObG" eventType="touchUpInside" id="bjv-e2-6Cm"/>
+                                            <segue destination="Drp-fz-Ikw" kind="show" id="EOM-Cp-4O4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pNH-Kj-AhL" secondAttribute="trailing" id="0eG-CC-1LC"/>
+                                    <constraint firstItem="pNH-Kj-AhL" firstAttribute="top" secondItem="XEX-mf-iVo" secondAttribute="bottom" id="Dgt-ze-N6w"/>
+                                    <constraint firstAttribute="bottom" secondItem="pNH-Kj-AhL" secondAttribute="bottom" id="KNq-9K-fub"/>
+                                    <constraint firstItem="pNH-Kj-AhL" firstAttribute="leading" secondItem="xcM-WR-yJp" secondAttribute="leading" id="zTf-p7-qCv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xcM-WR-yJp" firstAttribute="top" secondItem="DPS-NV-Dm1" secondAttribute="bottom" id="L3y-7D-Cag"/>
+                            <constraint firstAttribute="trailing" secondItem="xcM-WR-yJp" secondAttribute="trailing" id="Okq-78-Twn"/>
+                            <constraint firstAttribute="bottom" secondItem="xcM-WR-yJp" secondAttribute="bottom" id="QgQ-oP-Oin"/>
+                            <constraint firstItem="xcM-WR-yJp" firstAttribute="leading" secondItem="rUm-XE-bnJ" secondAttribute="leading" id="WkN-kz-ECN"/>
+                            <constraint firstItem="xcM-WR-yJp" firstAttribute="top" secondItem="DPS-NV-Dm1" secondAttribute="bottom" id="Yko-PP-uMV"/>
+                            <constraint firstAttribute="bottom" secondItem="xcM-WR-yJp" secondAttribute="bottom" id="o1B-Zb-2KJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xcM-WR-yJp" secondAttribute="trailing" id="s4z-Sw-jWD"/>
+                            <constraint firstItem="xcM-WR-yJp" firstAttribute="leading" secondItem="rUm-XE-bnJ" secondAttribute="leading" id="yi1-6f-8Li"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yFN-GG-3Fq"/>
+                    <connections>
+                        <outlet property="segmentoTamaño" destination="XEX-mf-iVo" id="exR-4A-CoB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qf7-Ia-bCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3211" y="362"/>
+        </scene>
+        <!--Masa View Controller-->
+        <scene sceneID="i5K-2y-PO8">
+            <objects>
+                <viewController id="Drp-fz-Ikw" customClass="MasaViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eKj-HH-ePg"/>
+                        <viewControllerLayoutGuide type="bottom" id="VF4-B5-RuA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bmH-Ra-8jt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4tc-kp-LSz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box_of_Pizza_8" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-Dp-xL5">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                        <animations/>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="43I-k7-fOb">
+                                        <rect key="frame" x="0.0" y="452" width="600" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="Ne4-SO-fhL"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Delgada"/>
+                                            <segment title="Crujiente"/>
+                                            <segment title="Gruesa"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-Lh-bIq">
+                                        <rect key="frame" x="0.0" y="480" width="600" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="NNT-Ku-2vG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="button-continuar"/>
+                                        <connections>
+                                            <action selector="accionSegmentoMasa:" destination="Drp-fz-Ikw" eventType="touchUpInside" id="WkV-Wu-6Zh"/>
+                                            <segue destination="6xC-cd-2Dp" kind="show" id="Iv7-ty-CFc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7kh-Lh-bIq" secondAttribute="bottom" id="9cu-x7-gDK"/>
+                                    <constraint firstAttribute="trailing" secondItem="7kh-Lh-bIq" secondAttribute="trailing" id="EEE-GI-0CF"/>
+                                    <constraint firstItem="7kh-Lh-bIq" firstAttribute="leading" secondItem="4tc-kp-LSz" secondAttribute="leading" id="qHs-Zl-nmm"/>
+                                    <constraint firstItem="7kh-Lh-bIq" firstAttribute="top" secondItem="43I-k7-fOb" secondAttribute="bottom" id="xQp-nr-wMi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4tc-kp-LSz" firstAttribute="top" secondItem="eKj-HH-ePg" secondAttribute="bottom" id="Cpb-Kn-oFN"/>
+                            <constraint firstAttribute="trailing" secondItem="4tc-kp-LSz" secondAttribute="trailing" id="GOU-gs-pbZ"/>
+                            <constraint firstItem="4tc-kp-LSz" firstAttribute="leading" secondItem="bmH-Ra-8jt" secondAttribute="leading" id="f3x-FV-Q5O"/>
+                            <constraint firstAttribute="bottom" secondItem="4tc-kp-LSz" secondAttribute="bottom" id="tkO-7a-uKX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentoMasa" destination="43I-k7-fOb" id="tCO-tm-0Tv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5X5-jW-b2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="362"/>
+        </scene>
+        <!--Queso View Controller-->
+        <scene sceneID="axs-qA-U79">
+            <objects>
+                <viewController id="6xC-cd-2Dp" customClass="QuesoViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sIB-Vg-5MD"/>
+                        <viewControllerLayoutGuide type="bottom" id="yCe-xT-NSy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Th2-W4-amd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="76b-Ii-S2Y">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box_of_Pizza_8" translatesAutoresizingMaskIntoConstraints="NO" id="HXa-RT-Lgw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                        <animations/>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-vQ-cVd">
+                                        <rect key="frame" x="0.0" y="452" width="600" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="Lm4-PJ-p5v"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Mozarela"/>
+                                            <segment title="Chedar"/>
+                                            <segment title="Parmesano"/>
+                                            <segment title="SIn queso"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7r-A7-Bf0">
+                                        <rect key="frame" x="0.0" y="480" width="600" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="SBT-5U-vb2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="button-continuar"/>
+                                        <connections>
+                                            <action selector="accionSegmentoQueso:" destination="6xC-cd-2Dp" eventType="touchUpInside" id="aHw-io-XJS"/>
+                                            <segue destination="hIB-Rj-xP6" kind="show" id="Kpz-F2-1Z9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="c7r-A7-Bf0" firstAttribute="top" secondItem="cb1-vQ-cVd" secondAttribute="bottom" id="Jjx-48-z1o"/>
+                                    <constraint firstAttribute="bottom" secondItem="c7r-A7-Bf0" secondAttribute="bottom" id="VQ5-HZ-ywV"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7r-A7-Bf0" secondAttribute="trailing" id="VYE-kA-EWt"/>
+                                    <constraint firstItem="c7r-A7-Bf0" firstAttribute="leading" secondItem="76b-Ii-S2Y" secondAttribute="leading" id="crm-Zz-dyi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="76b-Ii-S2Y" secondAttribute="trailing" id="Ih6-SV-gSV"/>
+                            <constraint firstAttribute="bottom" secondItem="76b-Ii-S2Y" secondAttribute="bottom" id="qS2-6e-3bD"/>
+                            <constraint firstItem="76b-Ii-S2Y" firstAttribute="top" secondItem="sIB-Vg-5MD" secondAttribute="bottom" id="tlB-OV-Ev0"/>
+                            <constraint firstItem="76b-Ii-S2Y" firstAttribute="leading" secondItem="Th2-W4-amd" secondAttribute="leading" id="wpn-yT-VbD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentoQueso" destination="cb1-vQ-cVd" id="gm2-I9-xmJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjD-Sn-REd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4509" y="362"/>
+        </scene>
+        <!--Ingredientes View Controller-->
+        <scene sceneID="WhC-ef-gqB">
+            <objects>
+                <viewController id="hIB-Rj-xP6" customClass="IngredientesViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hSH-Z4-spX"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Jm-Re-MgW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7dj-df-PNq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X8u-Du-N5v">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box_of_Pizza_8" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-HT-5fj">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="181"/>
+                                        <animations/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Ry-cU-pf0">
+                                        <rect key="frame" x="0.0" y="181" width="600" height="300"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s27-g2-tqe">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="syW-B1-mOh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionJamon:" destination="hIB-Rj-xP6" eventType="valueChanged" id="ZDo-7y-TIT"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jamón" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8z2-pg-Por">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdI-Te-m6T">
+                                                <rect key="frame" x="0.0" y="31" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1N4-WC-UQp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionPeperoni:" destination="hIB-Rj-xP6" eventType="valueChanged" id="Ra6-Qs-C2i"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pepperoni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tva-ZM-cvz">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hw-h0-V6p">
+                                                <rect key="frame" x="0.0" y="62" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pcf-8N-eZc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionPavo:" destination="hIB-Rj-xP6" eventType="valueChanged" id="112-np-ZfE"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pavo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsF-fS-6Q8">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-zh-cBP">
+                                                <rect key="frame" x="0.0" y="93" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Z-fh-dIb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionSalchicha:" destination="hIB-Rj-xP6" eventType="valueChanged" id="Wb1-Dp-J49"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salchicha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgY-Tq-iX3">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exq-aT-WGi">
+                                                <rect key="frame" x="0.0" y="124" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-6T-g1o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionAceituna:" destination="hIB-Rj-xP6" eventType="valueChanged" id="tJf-9a-04k"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aceituna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duP-HU-uv9">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKD-vK-zcF">
+                                                <rect key="frame" x="0.0" y="155" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2rR-s7-RYG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionCebolla:" destination="hIB-Rj-xP6" eventType="valueChanged" id="pYD-Dk-whb"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cebolla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdw-TC-TQh">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lJ-44-18T">
+                                                <rect key="frame" x="0.0" y="186" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="75Z-kH-edS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionPimiento:" destination="hIB-Rj-xP6" eventType="valueChanged" id="1t8-B8-2AL"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pimiento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVq-Yf-60X">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJx-Oe-4hm">
+                                                <rect key="frame" x="0.0" y="217" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cO6-E5-m2A">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionPiña:" destination="hIB-Rj-xP6" eventType="valueChanged" id="7Hv-lh-Q1F"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaV-ID-zFL">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-Fj-iRt">
+                                                <rect key="frame" x="0.0" y="248" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v7M-vW-sWd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionAnchoa:" destination="hIB-Rj-xP6" eventType="valueChanged" id="Oun-Bo-ddP"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anchoa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaB-U8-r6d">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-5o-jOU">
+                                                <rect key="frame" x="0.0" y="279" width="600" height="21"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kqp-g7-pBY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="accionChorizo:" destination="hIB-Rj-xP6" eventType="valueChanged" id="wfU-9w-5EJ"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chorizo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-xU-1mn">
+                                                        <rect key="frame" x="49" y="0.0" width="551" height="21"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="4HH-La-2cl"/>
+                                            <constraint firstItem="ejH-5o-jOU" firstAttribute="top" secondItem="9Ry-cU-pf0" secondAttribute="top" constant="279" id="9kz-tP-3lG"/>
+                                            <constraint firstAttribute="height" constant="305" id="O5k-P3-KbR"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4HH-La-2cl"/>
+                                                <exclude reference="O5k-P3-KbR"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ4-al-Bcx">
+                                        <rect key="frame" x="0.0" y="480" width="600" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="eit-de-Dfb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="button-continuar"/>
+                                        <connections>
+                                            <segue destination="iV1-gT-Ujf" kind="show" id="QQh-Vs-A7D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="Idi-HT-5fj" firstAttribute="leading" secondItem="X8u-Du-N5v" secondAttribute="leading" id="JEg-Ng-ebe"/>
+                                    <constraint firstItem="9Ry-cU-pf0" firstAttribute="top" secondItem="Idi-HT-5fj" secondAttribute="bottom" id="XYo-jG-DjG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Idi-HT-5fj" secondAttribute="trailing" id="coE-2Z-QEG"/>
+                                    <constraint firstItem="Idi-HT-5fj" firstAttribute="top" secondItem="X8u-Du-N5v" secondAttribute="top" id="nnm-w0-Qg0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X8u-Du-N5v" firstAttribute="leading" secondItem="7dj-df-PNq" secondAttribute="leading" id="3U4-7D-wXw"/>
+                            <constraint firstItem="X8u-Du-N5v" firstAttribute="top" secondItem="hSH-Z4-spX" secondAttribute="bottom" id="De1-3V-Uyx"/>
+                            <constraint firstAttribute="trailing" secondItem="X8u-Du-N5v" secondAttribute="trailing" id="WNz-ao-9Dy"/>
+                            <constraint firstItem="0Jm-Re-MgW" firstAttribute="top" secondItem="X8u-Du-N5v" secondAttribute="bottom" id="rdI-l9-B6o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aceituna" destination="xGc-6T-g1o" id="LAj-rk-08N"/>
+                        <outlet property="anchoa" destination="v7M-vW-sWd" id="Scu-HU-mSH"/>
+                        <outlet property="cebolla" destination="2rR-s7-RYG" id="8ha-b0-ucY"/>
+                        <outlet property="chorizo" destination="kqp-g7-pBY" id="nIf-vR-PBQ"/>
+                        <outlet property="jamon" destination="syW-B1-mOh" id="Dzh-1f-Rcy"/>
+                        <outlet property="pavo" destination="Pcf-8N-eZc" id="fCN-xY-Oqs"/>
+                        <outlet property="pepperoni" destination="1N4-WC-UQp" id="cQ3-xt-7ez"/>
+                        <outlet property="pimiento" destination="75Z-kH-edS" id="fNe-Qe-qCt"/>
+                        <outlet property="piña" destination="cO6-E5-m2A" id="v5U-zX-QKI"/>
+                        <outlet property="salchicha" destination="Y0Z-fh-dIb" id="0tk-nd-n0y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62C-RX-NPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5148" y="362"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OfY-3e-c8P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="47f-YQ-bnO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B7X-Kh-sKb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkg-cW-b1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2429" y="362"/>
+        </scene>
+        <!--Confirmacion View Controller-->
+        <scene sceneID="1nh-pI-GUI">
+            <objects>
+                <viewController storyboardIdentifier="ViewTama2" id="iV1-gT-Ujf" customClass="ConfirmacionViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gvN-Mg-Dr3"/>
+                        <viewControllerLayoutGuide type="bottom" id="zoO-Gn-JDd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wYo-8S-bBK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A1x-2R-Fla">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Txl_1" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-hp-33w">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="226"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu4-jk-xSl">
+                                        <rect key="frame" x="0.0" y="226" width="600" height="20.5"/>
+                                        <animations/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Confirmación de Pizza">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-8r-ayL">
+                                        <rect key="frame" x="0.0" y="246.5" width="600" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY5-pa-c91">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="21"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Pi5-6b-lgq"/>
+                                                    <constraint firstAttribute="height" constant="21" id="y5g-yb-V8K"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Tamaño:">
+                                                        <attributes>
+                                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-kS-HGp">
+                                                <rect key="frame" x="80" y="0.0" width="520" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbD-SJ-3sK">
+                                        <rect key="frame" x="0.0" y="267.5" width="600" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6c-e3-YUU">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="21"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="id1-hD-Kz8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-uQ-oqu">
+                                                <rect key="frame" x="80" y="0.0" width="520" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4to-di-l5G">
+                                        <rect key="frame" x="0.0" y="288" width="600" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wG-oy-hta">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="QoD-vp-qGC"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Queso:">
+                                                        <attributes>
+                                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS2-82-Sc9">
+                                                <rect key="frame" x="80" y="0.0" width="520" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTR-Go-cyL">
+                                        <rect key="frame" x="0.0" y="308.5" width="600" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKP-Uu-pPo">
+                                        <rect key="frame" x="0.0" y="329" width="600" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-j7-ReQ">
+                                        <rect key="frame" x="0.0" y="349.5" width="600" height="230.5"/>
+                                        <animations/>
+                                        <state key="normal" image="boton-comprar-ahora2">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mandarCocina:" destination="iV1-gT-Ujf" eventType="touchUpInside" id="6xB-3F-LRU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zoO-Gn-JDd" firstAttribute="top" secondItem="A1x-2R-Fla" secondAttribute="bottom" id="60p-fn-jHa"/>
+                            <constraint firstItem="A1x-2R-Fla" firstAttribute="leading" secondItem="wYo-8S-bBK" secondAttribute="leading" id="Ib8-fE-qgc"/>
+                            <constraint firstItem="A1x-2R-Fla" firstAttribute="top" secondItem="gvN-Mg-Dr3" secondAttribute="bottom" id="bjS-vg-YGg"/>
+                            <constraint firstAttribute="trailing" secondItem="A1x-2R-Fla" secondAttribute="trailing" id="tZg-YO-O04"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cocina" destination="EPv-j7-ReQ" id="BTU-38-Bxk"/>
+                        <outlet property="ingredientes" destination="DKP-Uu-pPo" id="jd2-fD-v6D"/>
+                        <outlet property="masa" destination="rQt-uQ-oqu" id="k3L-JJ-bJn"/>
+                        <outlet property="queso" destination="cS2-82-Sc9" id="ORR-Ys-Msu"/>
+                        <outlet property="tamaño" destination="g4f-kS-HGp" id="8L3-vE-NDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWK-Dx-xhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5804" y="362"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="o09-lC-QnK">
+            <objects>
+                <viewController storyboardIdentifier="ViewFinal" id="Ww9-Ls-EXB" customClass="FinalViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q7Z-XW-UgM"/>
+                        <viewControllerLayoutGuide type="bottom" id="nmG-JD-ZfY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5XL-2L-6dh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-z2-gWd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="Pizza paint" translatesAutoresizingMaskIntoConstraints="NO" id="aLn-dP-RmL">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="532"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¡Vuelva pronto!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-0w-R16">
+                                        <rect key="frame" x="0.0" y="532" width="600" height="48"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="w1J-dy-MXm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GLJ-z2-gWd" firstAttribute="leading" secondItem="5XL-2L-6dh" secondAttribute="leading" id="BOp-9m-Fz0"/>
+                            <constraint firstItem="GLJ-z2-gWd" firstAttribute="top" secondItem="Q7Z-XW-UgM" secondAttribute="bottom" id="G2s-xt-Ufk"/>
+                            <constraint firstAttribute="trailing" secondItem="GLJ-z2-gWd" secondAttribute="trailing" id="X3H-z3-Kml"/>
+                            <constraint firstAttribute="bottom" secondItem="GLJ-z2-gWd" secondAttribute="bottom" id="Xp4-Q5-sJX"/>
+                            <constraint firstAttribute="trailing" secondItem="GLJ-z2-gWd" secondAttribute="trailing" id="ezM-jP-dQb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJj-CI-d2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6467" y="362"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A62-cN-HrC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dav-DE-CxO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gTV-MM-Plg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TYF-t1-GvW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uc-6C-nYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="362"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Box_of_Pizza_8" width="1280" height="720"/>
+        <image name="Pizza paint" width="1680" height="1013"/>
+        <image name="Txl_1" width="400" height="226"/>
+        <image name="boton-comprar-ahora2" width="250" height="80"/>
+        <image name="boton_acceder" width="500" height="123"/>
+        <image name="button-continuar" width="568" height="189"/>
+    </resources>
+</document>
